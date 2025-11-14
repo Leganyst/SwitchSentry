@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 from typing import Optional, Any, Dict
 
 
-class AbstarctSwitch(ABC): 
+class AbstractSwitch(ABC): 
     def __init__(
         self,
         host: str,
