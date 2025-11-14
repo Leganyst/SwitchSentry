@@ -53,19 +53,19 @@ class AbstractSwitch(ABC):
         Необязательный метод: выполнение команды по SSH.
         Можно оставить пустым, или выбрасывать NotImplemented
         """
-        raise NotImplemented
+        raise NotImplementedError
     
     
     @abstractmethod
     def telnet_exec(self, cmd: str) -> str:
         """Метод, аналогичный ssh_exec, но для Telnet"""
-        raise NotImplemented
+        raise NotImplementedError
     
     
     @abstractmethod
     def http_check(self, path: str = "/") -> Dict[str, Any]:
         """Простая проверка веб-морды: статус код, время ответа"""
-        raise NotImplemented
+        raise NotImplementedError
     
     
     # ==== Высокоуровневая диагностика с унифицированным интерфейсом ====
